@@ -47,7 +47,9 @@ const quotes = [
  * `getRandomQuote` function
 ***/
 const getRandomQuote = () => {
-  let randomNumber = Math.floor(Math.random() * quotes.length);
+  let randomNumber = Math.floor(Math.random() * quotes.length + 1);
+  let selected = quotes[randomNumber]; //chooses the selected quote
+  
 }
 
 
@@ -55,7 +57,9 @@ const getRandomQuote = () => {
  * `printQuote` function
 ***/
 
+const printQuote = () => {
 
+}
 
 /***
  * click event listener for the print quote button
