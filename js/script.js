@@ -34,18 +34,24 @@ const quotes = [
     tags: 'Autobiography'
   },
   {
+    quote:'The saddest aspect of life right now is that science gathers knowledge faster than society gathers wisdom.',
+    source :'Isaac Asimov',    
+    tags: 'Science Fiction'
+  },
+  {
     quote:'We’ve all got both light and dark inside us. What matters is the part we choose to act on. That’s who we really are.',
     source :'J. K. Rowling',
     citation :'Harry Potter and the Order of the Phoenix',
     year: '2004',
     tags: 'Young Adult'
   },
+
   {
     quote:'Put some Windex.',
     source :'Gus Portokalos',
     citation :'My Big Fat Greek Wedding',
     year: '2002',
-    tags: 'Comedy, Drama, Romance'
+    tags: 'Comedy'
   },
   {
     quote:'We’ve all got both light and dark inside us. What matters is the part we choose to act on. That’s who we really are.',
@@ -61,6 +67,11 @@ const quotes = [
     year: '1813',
     tags: 'Romance'
   },
+  {
+    quote:'Never memorize something that you can look up.',
+    source:' Albert Einstein',  
+    tags: 'Science'
+  },
 ];
 
 
@@ -75,25 +86,23 @@ const getRandomQuote = (array) => {
   //console.log(index);
   let selected = array[index]; //the random number becomes the index and selects the object
   return selected;
-}
+};
 
 /***
- * `changeBackground` function
+ * `randomColorNum` function
 ***/
 
-const changeBackground = () => {
-  let r = Math.floor((Math.random() * 255) + 1);
-  let g = Math.floor((Math.random() * 255) + 1);
-  let b = Math.floor((Math.random() * 255) + 1);
-    
-}
+const randomColorNum = () => {  //gets a random number value to be sent down to change background color
+  let color = Math.floor((Math.random() * 255) + 1);  
+  return color;    
+};
 
-changeBackground();
 
  
 /***
  * `printQuote` function
 ***/
+
 
 const printQuote = () => {
 
@@ -108,14 +117,25 @@ const printQuote = () => {
         if(quote.year){    
           text += `<span class="year">${quote.year}</span>`;
         }
+        if(quote.tags){    
+          text += `, <span class="tags">${quote.tags}</span>`;
+        }
   text += `</p>`; //closing tag for paragraph
+
+  document.body.style.background = `rgb(${randomColorNum()},${randomColorNum()},${randomColorNum()})`;
+
   
   let html = document.getElementById('quote-box').innerHTML = text; 
-  console.log(html);
+
 
   return html;
-}
-printQuote();
+};
+
+setInterval(function(){ printQuote() }, 10000);
+ 
+
+
+
 
 
 /***
