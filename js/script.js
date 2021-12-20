@@ -39,11 +39,11 @@ const quotes = [
     tags: 'Science Fiction'
   },
   {
-    quote:'We’ve all got both light and dark inside us. What matters is the part we choose to act on. That’s who we really are.',
-    source :'J. K. Rowling',
-    citation :'Harry Potter and the Order of the Phoenix',
-    year: '2004',
-    tags: 'Young Adult'
+    quote:'Tell the truth, or someone will tell it for you.',
+    source :'Stephanie Klein',
+    citation :'Straight Up and Dirty',
+    year: '2006',
+    tags: 'Memoir'
   },
 
   {
@@ -54,11 +54,11 @@ const quotes = [
     tags: 'Comedy'
   },
   {
-    quote:'We’ve all got both light and dark inside us. What matters is the part we choose to act on. That’s who we really are.',
-    source :'J. K. Rowling',
-    citation :'Harry Potter and the Order of the Phoenix',
-    year: '2004',
-    tags: 'Young Adult'
+    quote:'What you\'re supposed to do when you don\'t like a thing is change it. If you can\'t change it, change the way you think about it. Don\'t complain.',
+    source :'Maya Angelou',
+    citation :'Wouldn\'t Take Nothing for My Journey Now',
+    year: '1997',
+    tags: 'Non-Fiction'
   },
   {
     quote:'Angry people are not always wise.',
